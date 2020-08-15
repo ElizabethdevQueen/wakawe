@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import '../App.css';
 import InfoBanner from './InfoBanner';
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
+// import Routes from '../Pages/Routes';
 
 export default class Nav extends Component {
     render() {
         return (
             <section className="navbar">
+                <Router>
                 <nav>
                     <input type="checkbox" id="check" />
                     <label for="check" className="checkbtn">
@@ -21,27 +23,40 @@ export default class Nav extends Component {
                                 Home
                             </li>
                         </Link>
-                        <Link>
+                        
+                        <Link to="/about">
                             <li>
                                 About Us
                             </li>
                         </Link>
-                        <Link>
+                        <Link to="/blog">
                             <li>
-                                Blog
+                                 Blog
                             </li>
                         </Link>
+                        <Link to="/bookapp">
                         <li>
-                            Gallery
+                                Book App
                         </li>
-                        <li>
-                            Contact Us
-                        </li>
-                        <button className="nav-btn">
-                            LOGIN
-                        </button>
+                        </Link>
+                        <Link to="/gallery">
+                            <li>
+                                Gallery
+                            </li>
+                        </Link>
+                        <Link to="/contact">
+                            <li>
+                                Contact Us
+                            </li>
+                        </Link>
+                        <Link to="/login">
+                            <button className="nav-btn">
+                                LOGIN
+                            </button>
+                        </Link>
                     </ul>
                 </nav>
+                </Router>
                 <InfoBanner />
             </section>
         )
