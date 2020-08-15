@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import '../App.css';
-import InfoBanner from './InfoBanner';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import Routes from '../Pages/Routes';
 
 export default class Nav extends Component {
     render() {
         return (
-            <section className="navbar">
-                <Router>
+            <div>
                 <nav>
                     <input type="checkbox" id="check" />
                     <label for="check" className="checkbtn">
@@ -31,7 +29,7 @@ export default class Nav extends Component {
                         </Link>
                         <Link to="/blog">
                             <li>
-                                 Blog
+                                    Blog
                             </li>
                         </Link>
                         <Link to="/bookapp">
@@ -56,9 +54,7 @@ export default class Nav extends Component {
                         </Link>
                     </ul>
                 </nav>
-                </Router>
-                <InfoBanner />
-            </section>
+            </div>
         )
     }
 }

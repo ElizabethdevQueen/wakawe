@@ -1,16 +1,20 @@
 import React from 'react';
 import Books from './Books';
+import Nav from './Nav';
 
 
 function BookApp () {
     return(
+        <>
+        <Nav />
         <section className="bookapp">
-            <div className="header">
+            {/* <div className="header">
                 <i className="fas fa-book fa-2x"></i>
                 <h1>Book App</h1>
-            </div>
+            </div> */}
             <Books />
         </section>
+        </>
     )
 }
 

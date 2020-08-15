@@ -40,20 +40,20 @@ export default class Books extends Component {
         return cleanedData;
     }
     render() {
-        const sortedBooks = this.state.books.sort((a,b) => {
-            if(this.state.sort === 'Newest') {
-                return parseInt(b.volumeInfo.publishedDate.substring(0, 4)) - parseInt(a.volumeInfo.publishedDate.substring(0, 4))
-            }
+            const sortedBooks = this.state.books.sort((a,b) => {
+                if (this.state.sort === 'Newest') {
+                    return parseInt(b.volumeInfo.publishedDate.substring(0, 4)) - parseInt(a.volumeInfo.publishedDate.substring(0, 4))
+                }
             else if (this.state.sort === 'Oldest') {
-                return parseInt(a.volumeInfo.publishedDate.substring(0, 4)) - parseInt(b.volumeInfo.publishedData.substring(0, 4))
-            }
-            return sortedBooks;
-        })
-
+                    return parseInt(a.volumeInfo.publishedDate.substring(0, 4)) - parseInt(b.volumeInfo.publishedData.substring(0, 4))
+                }
+                return a;
+            })
+    
         return (
             <div className="books">
+                <SearchArea handleSearch={this.handleSearch} searchBook={this.searchBook} handleSort={this.handleSort} />
                 <BookList books={sortedBooks} />
-                <SearchArea handleSearch={this.handleSearch} searchBook={this.searchBook} handleSort={this.handleSort}/>
             </div>
         );
     }

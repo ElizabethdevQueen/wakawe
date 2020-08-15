@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Blog from './components/Blog';
@@ -8,12 +8,13 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Login from './components/Login';
 import BookApp from './components/BookApp';
+// import Nav from './components/Nav';
 
 
 
 function App() {
   return (
-      <React.Fragment>
+      <Router>
         <Switch>
           <Route path="/" exact component={Home} ></Route>
           <Route path="/about" component={About} ></Route>
@@ -23,7 +24,7 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/login" component={Login} />
         </Switch> 
-      </React.Fragment>
+      </Router>
   );
 }
 

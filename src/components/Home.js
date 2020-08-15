@@ -5,7 +5,8 @@ import Nav from '../components/Nav';
 import Keynote from '../components/Keynote';
 import RandomQuotes from '../components/RandomQuotes';
 import BookDisplay from '../components/BookDisplay';
-import BookApp from './BookApp';
+// import BookApp from './BookApp';
+import InfoBanner from './InfoBanner';
 
 
 
@@ -14,8 +15,9 @@ function Home() {
         <React.Fragment>
             <div className="App">
                 <Nav />
+                <InfoBanner />
                 <Keynote />
-                <BookApp />
+                {/* <BookApp /> */}
                 <RandomQuotes />
                 <BookDisplay />
                 
