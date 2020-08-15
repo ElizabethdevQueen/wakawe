@@ -7,7 +7,7 @@ function BookApp () {
         <section className="bookapp">
             <div className="header">
                 <i className="fas fa-book fa-2x"></i>
-                <h1>Book Cards</h1>
+                <h1>Book App</h1>
             </div>
             <Books />
         </section>

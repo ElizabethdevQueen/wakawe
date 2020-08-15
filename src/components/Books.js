@@ -47,6 +47,7 @@ export default class Books extends Component {
             else if (this.state.sort === 'Oldest') {
                 return parseInt(a.volumeInfo.publishedDate.substring(0, 4)) - parseInt(b.volumeInfo.publishedData.substring(0, 4))
             }
+            return sortedBooks;
         })
 
         return (
