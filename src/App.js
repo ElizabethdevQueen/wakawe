@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+// import './App.css';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
@@ -9,12 +9,13 @@ import Contact from './components/Contact';
 import Login from './components/Login';
 import BookApp from './components/BookApp';
 import Nav from './components/Nav';
+// import Nav from './components/Nav';
 
 
 
 function App() {
   return (
-      <Router>
+      <Router>  
         <Nav />
         <Switch>
           <Route path="/" exact component={Home} ></Route>

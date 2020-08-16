@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../Gallery.css';
+import Nav from './Nav';
 
 
 class Gallery extends Component {
@@ -55,6 +56,8 @@ class Gallery extends Component {
 
     render() {
         return (
+            <>
+            <Nav />
             <div className='mainslide'>
                 <div className={this.state.anim ? 'newPixs images' : 'images'}>
                     <img src={`./images/book-${this.state.count}.jpg`} alt="" />
@@ -64,6 +67,7 @@ class Gallery extends Component {
                     <i onClick={this.arrowRightHandler} className="fas fa-chevron-right"></i>
                 </div>
             </div>
+            </>
         );
     }
 }

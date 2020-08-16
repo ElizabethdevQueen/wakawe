@@ -15,10 +15,8 @@ function Home() {
     return (
         <React.Fragment>
             <div className="App">
-                {/* <Nav /> */}
                 <InfoBanner />
                 <Keynote />
-                {/* <BookApp /> */}
                 <RandomQuotes />
                 <BookDisplay />
                 <Footer />

@@ -1,11 +1,11 @@
 import React from 'react';
-import Nav from './Nav';
+import '../App.css';
+// import Nav from './Nav';
 
 
 function Blog() {
     return (
         <div>
-            <Nav />
             <h1>Blog</h1>
         </div>
     );
