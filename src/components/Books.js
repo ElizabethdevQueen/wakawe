@@ -53,7 +53,7 @@ export default class Books extends Component {
         return (
             <div className="books">
                 <SearchArea handleSearch={this.handleSearch} searchBook={this.searchBook} handleSort={this.handleSort} />
-                <BookList books={sortedBooks} />
+                <BookList books={sortedBooks} style={{fontSize: 'large'}}/>
             </div>
         );
     }

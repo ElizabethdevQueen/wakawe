@@ -4,13 +4,13 @@
   height: 90vh !important;
   width: 100%;
   /* margin-top: 50px; */
-  background-image: url(https://t3.ftcdn.net/jpg/00/96/92/30/240_F_96923054_xIpJXwMGU5bJZ8v0tcp2PsQaarU2ZCeM.jpg);
+  background-image: url(https://assets.entrepreneur.com/content/3x2/2000/20190102161219-GettyImages-904000456.jpeg);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 nav{
-  background-color: rgb(110, 105, 95);
+  background-color: #5F6A6A;
   height: 80px;
   width: 100%;
   position: fixed !important;
@@ -43,7 +43,7 @@ nav ul li{
 li.active, li:hover{
   /* background: #1b9bff; */
   transition: .5s;
-  color: rgb(100, 75, 75);
+  color: rgb(252, 245, 245);
 }
 .nav-btn{
   padding: 15px;
@@ -140,14 +140,14 @@ button:hover{
 
 
 /* INFO BANNER SECTION */
-.book-info{
+.navbar .book-info{
   display: flex;
-  margin-top: 60px;
+  margin-top: 90px !important;
   margin-left: 250px;
   margin-right: 50px;
   align-content: center;
   justify-content: space-between;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 .bk-title{
   margin-top: 100px;
@@ -291,8 +291,10 @@ button:hover{
   padding: 35px;
   margin: auto;
   height: 100%;
-  margin-top: 30px;
+  margin-top: 0px;
+  /* padding-top: 150px; */
 }
+
 .login-form h1{
   text-align: center;
   margin-top: 10px;
@@ -309,8 +311,9 @@ button:hover{
   width: 100%;
   height: auto;
   padding-bottom: 80px;
-  background-image: url(https://images.template.net/wp-content/uploads/2015/11/25190626/Light-Red-Wallpaper-Background-Download.jpg);
+  /* background-image: url(https://images.template.net/wp-content/uploads/2015/11/25190626/Light-Red-Wallpaper-Background-Download.jpg); */
   background-size: cover;
+  background-color: #7F8C8D;
 }
 /* .header{
   padding: 20px 0 20px 0;
@@ -374,5 +377,8 @@ input{
   margin-left: 5px;
   font-size: 1.5em;
 }
+
+
+/* contact us */
 
 

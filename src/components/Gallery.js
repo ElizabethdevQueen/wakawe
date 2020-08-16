@@ -1,89 +1,74 @@
-import React, { useState } from 'react';
-import {
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption
-} from 'reactstrap';
+import React, { Component } from 'react';
+import '../Gallery.css';
 
-const items = [
-    {
-        id: 1,
-        img: 'https://miro.medium.com/max/10944/1*S81O15rjKfG-BFdnNC6-GQ.jpeg',
-        altText: 'Slide 1',
-        caption: 'Slide 1'
-    },
-    {
-        id: 2,
-        altText: 'Slide 2',
-        caption: 'Slide 2'
-    },
-    {
-        id: 3,
-        altText: 'Slide 3',
-        caption: 'Slide 3'
-    }
-];
 
-const Gallery = (props) => {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(false);
+class Gallery extends Component {
 
-    const next = () => {
-        if (animating) return;
-        const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-        setActiveIndex(nextIndex);
+    state = {
+        count: 1,
+        anim: false
     }
 
-    const previous = () => {
-        if (animating) return;
-        const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-        setActiveIndex(nextIndex);
+    arrowLeftHandler = () => {
+        let newCount = this.state.count + 1;
+        this.setState({
+            count: newCount,
+            anim: true
+        })
+        this.timer();
+
+        if (this.state.count === 9) {
+            this.setState({
+                count: 1
+            })
+        }
+        console.log(this.state.count);
+    }
+    arrowRightHandler = () => {
+        let newCount = this.state.count - 1;
+        this.setState({
+            count: newCount,
+            anim: true
+        })
+        this.timer();
+
+        if (this.state.count === 1) {
+            this.setState({
+                count: 9
+            })
+        }
+        console.log(this.state.count);
+    }
+    componentDidMount() {
+        this.intervalClear = this.timer();
+    }
+    timer = () => {
+        setTimeout(() => {
+            this.setState({
+                anim: false
+            })
+        }, 300)
+    }
+    componentWillUnmount() {
+        clearInterval(this.intervalClear);
     }
 
-    const goToIndex = (newIndex) => {
-        if (animating) return;
-        setActiveIndex(newIndex);
-    }
-
-    const slides = items.map((item) => {
+    render() {
         return (
-            <CarouselItem
-                className="custom-tag"
-                tag="div"
-                key={item.id}
-                onExiting={() => setAnimating(true)}
-                onExited={() => setAnimating(false)}
-            >
-                <CarouselCaption className="text-danger" captionText={item.caption} captionHeader={item.caption} />
-            </CarouselItem>
+            <>
+            {/* <Nav /> */}
+            <div className='mainslide'>
+                <div className={this.state.anim ? 'newPixs images' : 'images'}>
+                    <img src={`./images/book-${this.state.count}.jpg`} alt="" />
+                </div>
+                <div className="btns">
+                    <i onClick={this.arrowLeftHandler} className="fas fa-chevron-left"></i>
+                    <i onClick={this.arrowRightHandler} className="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            </>
         );
-    });
-
-    return (
-        <div>
-            <style>
-                {
-                    `.custom-tag {
-              max-width: 100%;
-              height: 500px;
-              background: black;
-            }`
-                }
-            </style>
-            <Carousel
-                activeIndex={activeIndex}
-                next={next}
-                previous={previous}
-            >
-                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-                {slides}
-                <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-                <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-            </Carousel>
-        </div>
-    );
+    }
 }
 
 export default Gallery;
