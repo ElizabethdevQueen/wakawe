@@ -168,8 +168,8 @@
   width: 80%;
   margin: 0 auto;
   padding-top: 150px;
-  /* padding-bottom: 70px; */
-  height: 130vh;
+  padding-bottom: 70px;
+  height: 150vh;
 }
 .contact-right{
   flex-basis: 40%;
@@ -213,7 +213,7 @@
   flex-basis: 60%;
   padding: 40px 60px;
 }
-label{
+.input-row .label{
   margin-bottom: 6px;
   display: block;
   color: #1c00b5;

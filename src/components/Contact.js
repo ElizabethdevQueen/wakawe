@@ -16,7 +16,7 @@ function Contact() {
                     <form>
                         <div className="input-row">
                             <div className="input-group">
-                                    <label>Name</label>
+                                    <label className="label">Name</label>
                                     <input type="text" placeholder="Your name" />
                             </div>
                             <div className="input-group">
@@ -36,7 +36,7 @@ function Contact() {
                         </div>
 
                         <label>Message</label>
-                        <textarea rows="5" placeholder="Your message..."></textarea>
+                        <textarea rows="5" placeholder="Your message..."></textarea><br/>
                         <button className="contact-butn" type="submit">SEND</button>
                     </form>
                 </div>
