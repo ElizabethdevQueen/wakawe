@@ -40,10 +40,10 @@ nav ul li{
   cursor: pointer;
 }
 
-li.active, li:hover{
+li:hover{
   /* background: #1b9bff; */
   transition: .5s;
-  color: rgb(252, 245, 245);
+  color: rgb(216, 155, 155);
 }
 .nav-btn{
   padding: 15px;

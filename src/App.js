@@ -8,13 +8,14 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Login from './components/Login';
 import BookApp from './components/BookApp';
-// import Nav from './components/Nav';
+import Nav from './components/Nav';
 
 
 
 function App() {
   return (
       <Router>
+        <Nav />
         <Switch>
           <Route path="/" exact component={Home} ></Route>
           <Route path="/about" component={About} ></Route>

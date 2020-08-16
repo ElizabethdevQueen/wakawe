@@ -2,14 +2,12 @@ import React from 'react';
 import {Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import {FacebookLoginButton} from 'react-social-login-buttons';
 import '../App.css'
-import Nav from './Nav';
+// import Nav from './Nav';
 
 
 function Login() {
     return (
-        <div>
-        <Nav />
-        
+        <div>        
         <Form className="login-form">
             <h1><span className="font-weight-bold">Wakawe.com</span></h1>
             <h2>Welcome</h2>
