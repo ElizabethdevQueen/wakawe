@@ -221,13 +221,8 @@ button:hover{
   height: 80vh;
   background-image: url(https://images.unsplash.com/photo-1545696648-86c761bc5410?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
   position: static;
+  background-attachment: fixed;
 }
-/* .rdm-quotes{
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: seashell;
-} */
 .quoteBox{
   position: absolute;
   background-color: seashell;
@@ -312,7 +307,6 @@ button:hover{
   width: 100%;
   height: auto;
   padding-bottom: 80px;
-  /* background-image: url(https://images.template.net/wp-content/uploads/2015/11/25190626/Light-Red-Wallpaper-Background-Download.jpg); */
   background-size: cover;
   background-color: #7F8C8D;
 }
@@ -380,6 +374,8 @@ input{
 }
 
 
-/* contact us */
+.btn-wrapper{
+  margin-bottom: 40px;
+}
 
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../Gallery.css';
 import Nav from './Nav';
+import InfoBanner from './InfoBanner';
 
 
 class Gallery extends Component {
@@ -58,6 +59,7 @@ class Gallery extends Component {
         return (
             <>
             <Nav />
+            <InfoBanner />
             <div className='mainslide'>
                 <div className={this.state.anim ? 'newPixs images' : 'images'}>
                     <img src={`./images/book-${this.state.count}.jpg`} alt="" />
