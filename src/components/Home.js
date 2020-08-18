@@ -5,9 +5,8 @@ import '../index.css';
 import Keynote from '../components/Keynote';
 import RandomQuotes from '../components/RandomQuotes';
 import BookDisplay from '../components/BookDisplay';
-// import BookApp from './BookApp';
 import InfoBanner from './InfoBanner';
-import Footer from '../components/Footer';
+
 
 
 
@@ -19,7 +18,7 @@ function Home() {
                 <Keynote />
                 <RandomQuotes />
                 <BookDisplay />
-                <Footer />
+                
             </div>
         </React.Fragment>
     )

@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Login from './components/Login';
 import BookApp from './components/BookApp';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 // import Nav from './components/Nav';
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/contact" component={Contact} />
           <Route path="/login" component={Login} />
         </Switch> 
+      <Footer />
       </Router>
   );
 }
