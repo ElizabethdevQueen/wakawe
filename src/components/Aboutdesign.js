@@ -42,7 +42,7 @@ class Aboutdesign extends React.Component {
                     <Container className="py-md">
                         <Row className="justify-content-between align-items-center">
                             <Col className="mb-5 mb-lg-0" lg="5">
-                                <h1 className="text-black font-weight-light ">
+                                <h1 className="text-black font-weight-bolder ">
                                     About WakawE
                 </h1>
                                 <p className="lead text-black mt-4">

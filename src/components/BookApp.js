@@ -1,12 +1,11 @@
 import React from 'react';
 import Books from './Books';
-import Nav from './Nav';
+import '../App.css';
 
 
 function BookApp () {
     return(
         <>
-        <Nav />
         <section className="bookapp">
             {/* <div className="header">
                 <i className="fas fa-book fa-2x"></i>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Container, Row, Col } from "reactstrap";
 import Aboutdesign from "./Aboutdesign";
+import '../App.css';
 
 
 class About extends React.Component {
@@ -10,7 +11,7 @@ class About extends React.Component {
                 <section className="section section-lg section-nucleo-icons pb-250">
                     <Container>
                         <Row className="justify-content-center">
-                            <Col className="text-center" lg="8" font-weight-bolder>
+                            <Col className="text-center" lg="8">
                                 <h2 className="display-3">What we do</h2>
                                 <p className="lead">
                                     Get access to our updated <br />library of great books
@@ -32,7 +33,7 @@ class About extends React.Component {
                     <Container>
                     <Row className="row-grid justify-content-center">
                         <Col className="text-center" lg="6">
-                            <h2 className="display-2">
+                            <h2 className="display-1">
                                 Do you love what we do?
                                 
                             </h2>

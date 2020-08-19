@@ -10,6 +10,7 @@ import Login from './components/Login';
 import BookApp from './components/BookApp';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import InfoBanner from './components/InfoBanner';
 // import Nav from './components/Nav';
 
 
@@ -18,6 +19,7 @@ function App() {
   return (
       <Router>  
         <Nav />
+        <InfoBanner />
         <Switch>
           <Route path="/" exact component={Home} ></Route>
           <Route path="/about" component={About} ></Route>
